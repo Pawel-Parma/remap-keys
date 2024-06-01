@@ -1,6 +1,6 @@
 = RemapKeys
 
-RemapKeys allows you to remap your keyboard keys.
+RemapKeys allows you to remap your keyboard keys. +
 The default mapping "mirrors" the 1-0, q-p, a-l and z-m keys to reach the entire keyboard with one hand.
 
 It consists of two main parts: a script written in AutoHotkey (`remap.ahk`) and a Python script (`main.py`).
@@ -36,4 +36,17 @@ To use it:
 Current mapping dictionary:
 
 [source,python]
-include::src/main.py[lines=2..13]
+----
+mapping = {
+    "1": "0",  "q": "p",  "a": "l",  "z": "m",
+    "2": "9",  "w": "o",  "s": "k",  "x": "n",
+    "3": "8",  "e": "i",  "d": "j",  "c": "b",
+    "4": "7",  "r": "u",  "f": "h",  "v": "v",
+    "5": "6",  "t": "y",  "g": "g",  "b": "c",
+    "6": "5",  "y": "t",  "h": "f",  "n": "x",
+    "7": "4",  "u": "r",  "j": "d",  "m": "z",
+    "8": "3",  "i": "e",  "k": "s",
+    "9": "2",  "o": "w",  "l": "a",
+    "0": "1",  "p": "q",
+}
+----
