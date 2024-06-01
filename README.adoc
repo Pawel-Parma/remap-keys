@@ -1,6 +1,8 @@
 = RemapKeys
-// TODO
+
 RemapKeys allows you to remap your keyboard keys.
+The default mapping "mirrors" the 1-0, q-p, a-l and z-m keys to reach the entire keyboard with one hand.
+
 It consists of two main parts: a script written in AutoHotkey (`remap.ahk`) and a Python script (`main.py`).
 
 == Using remap.ahk
@@ -28,12 +30,10 @@ To use it:
 2. Open the `main.py` file in a text editor.
 3. Modify the `mapping` dictionary to define your own key mappings. For example "1": "0" - remap 1 to 0.
 4. Ensure `sort_values` has all the keys from the `mapping` dictionary in the order you want them to be sorted.
-5. Run the script with the command `python main.py`. The script will print the AutoHotkey code for the new mappings.
+5. Run the script with the command `python main.py`. It will print the AutoHotkey code for the new mappings.
 6. Copy the output and paste it into the `remap.ahk` file below the `mapping := Object()` in the `; Mapping` section.
 
 Current mapping dictionary:
 
 [source,python]
-----
 include::src/main.py[lines=2..13]
-----
