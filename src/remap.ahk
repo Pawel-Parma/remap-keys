@@ -2,7 +2,9 @@
 #SingleInstance Force
 SendMode Input
 
+; Mapping
 mapping := Object()
+
 mapping["1"] := "0"
 mapping["2"] := "9"
 mapping["3"] := "8"
@@ -43,8 +45,11 @@ mapping["b"] := "c"
 mapping["n"] := "x"
 mapping["m"] := "z"
 
+
+; Globals
 isMirrored := false
 
+; Hotkeys
 ^!Shift::
     isMirrored := !isMirrored
     if (isMirrored) {
@@ -72,6 +77,7 @@ isMirrored := false
     }
 return
 
+; Helper functions
 MirrorKey:
     StringRight, thisKey, A_ThisHotkey, 1
     Send % "{Blind}" mapping[thisKey]
