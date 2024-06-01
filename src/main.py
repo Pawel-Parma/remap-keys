@@ -13,6 +13,9 @@ mapping = {
 }
 sort_values = "1234567890qwertyuiopasdfghjklzxcvbnm"
 
+if mapping.keys() != set(sort_values):
+    raise ValueError("Mapping keys do not match sort_values")
+
 mapped = []
 for k, v in mapping.items():
     mapped.append((k, v, template % (k, v)))
