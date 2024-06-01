@@ -1,0 +1,35 @@
+= RemapKeys
+
+RemapKeys allows you to remap your keyboard keys.
+It consists of two main parts: a script written in AutoHotkey (`remap.ahk`) and a Python script (`main.py`).
+
+== Using remap.ahk
+
+AutoHotkey (v1.1) script that remaps your keyboard keys according to a predefined mapping.
+
+To use it:
+
+1. Install AutoHotkey v1.1 from https://www.autohotkey.com/[here].
+2. Double-click on the `remap.ahk` file to run the script.
+3. Use the key combination Ctrl + Alt + Shift to toggle the key remapping on and off
+
+Tips:
+ - You can add the script to your startup folder.
+ - Change the key combination.
+
+== Using main.py
+
+A Python script that allows you to generate your own key mappings.
+
+To use it:
+
+1. Make sure you have Python installed. If not, you can download it from https://www.python.org/downloads/[here].
+2. Open the `main.py` file in a text editor.
+3. Modify the `mapping` dictionary to define your own key mappings. The keys of the dictionary are the original keys, and the values are the keys they should be mapped to.
+// TODO: add more
+// 4. Run the script with the command `python main.py`. The script will print the AutoHotkey code for the new key mappings.
+
+[source,python]
+----
+include::src/main.py[lines=2..13]
+----
