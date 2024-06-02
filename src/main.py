@@ -1,5 +1,8 @@
 template = 'mapping["%s"] := "%s"'
 mapping = {
+    "``": "{Backspace}",
+    "F1": "{Enter}",
+
     "1": "0",  "q": "p",  "a": "l",  "z": "m",
     "2": "9",  "w": "o",  "s": "k",  "x": "n",
     "3": "8",  "e": "i",  "d": "j",  "c": "b",
@@ -11,7 +14,13 @@ mapping = {
     "9": "2",  "o": "w",  "l": "a",
     "0": "1",  "p": "q",
 }
-sort_values = "1234567890qwertyuiopasdfghjklzxcvbnm"
+sort_values = [
+    "``", "F1",
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
+    "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
+    "a", "s", "d", "f", "g", "h", "j", "k", "l",
+    "z", "x", "c", "v", "b", "n", "m",
+]
 
 if mapping.keys() != set(sort_values):
     raise ValueError("Mapping keys do not match sort_values")
@@ -22,4 +31,5 @@ for k, v in mapping.items():
 
 
 mapped.sort(key=lambda x: sort_values.index(x[0]))
-print(*mapped, sep="\n")
+for i in mapped:
+    print(i[2])
