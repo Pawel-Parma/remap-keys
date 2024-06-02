@@ -33,11 +33,19 @@ To use it:
 5. Run the script with the command `python main.py`. It will print the AutoHotkey code for the new mappings.
 6. Copy the output and paste it into the `remap.ahk` file below the `mapping := Object()` in the `; Mapping` section.
 
+----
+**Note:** +
+You have to use the AutoHotkey's notation of keys.
+----
+
 Current mapping dictionary:
 
 [source,python]
 ----
 mapping = {
+    "``": "{Backspace}",
+    "F1": "{Enter}",
+
     "1": "0",  "q": "p",  "a": "l",  "z": "m",
     "2": "9",  "w": "o",  "s": "k",  "x": "n",
     "3": "8",  "e": "i",  "d": "j",  "c": "b",
